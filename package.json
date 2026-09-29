@@ -1,0 +1,23 @@
+{
+  "name": "developer-portal-react",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "gen:docs": "node scripts/gen-docs.mjs",
+    "predev": "npm run gen:docs",
+    "dev": "vite",
+    "prebuild": "npm run gen:docs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "vite": "^7.0.0"
+  }
+}
