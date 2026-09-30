@@ -59,6 +59,7 @@ export default function Login() {
     <section className="login-page">
       <div className="login-grid">
         <aside className="login-visual">
+          <Link to="/docs" className="login-back-link"><Icon name="arrow" size={16} /> Back to docs</Link>
           <div className="login-scene">
             <img
               src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85"

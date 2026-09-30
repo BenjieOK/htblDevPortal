@@ -28,7 +28,7 @@ function Hero() {
     <section className="hero">
       <div className="container hero-inner">
         <div className="hero-copy">
-          <span className="eyebrow">All-in-one payment solutions</span>
+          <span className="eyebrow">All-in-one solutions</span>
           <h1>Welcome to {PORTAL_NAME}</h1>
           <h2 className="hero-subtitle">Programmable API integration with instant payments</h2>
           <p className="lead">
@@ -36,11 +36,11 @@ function Hero() {
             integrate payments, transfers, bills and more, then test safely in the sandbox.
           </p>
           <div className="hero-ctas">
-            <Link to="/docs" className="btn btn-primary">Explore the APIs</Link>
+            <Link to="/docs" className="btn btn-primary">Explore the Hubtel APIs</Link>
             <Link to="/login?next=%2Fdashboard" className="btn btn-ghost">Get started</Link>
           </div>
           <div className="hero-quick-access" aria-label="Quick access to popular endpoints">
-            <span className="hero-quick-label">Popular endpoints</span>
+            <span className="hero-quick-label">Popular Endpoints</span>
             <ul>
               {quickEndpoints.map((endpoint) => (
                 <li key={endpoint.id}>
