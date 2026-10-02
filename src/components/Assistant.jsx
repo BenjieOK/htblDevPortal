@@ -114,18 +114,18 @@ export default function Assistant() {
       <button
         className={`assistant-fab${open ? ' hidden' : ''}`}
         onClick={() => setOpen(true)}
-        aria-label="Open the developer assistant"
+        aria-label="Ask the Hubtel AI assistant"
       >
         <Icon name="sparkle" size={20} /> <span>Ask AI</span>
       </button>
 
       {open && (
-        <section className="assistant" role="dialog" aria-label={`${BRAND} Developer Assistant`}>
+        <section className="assistant" role="dialog" aria-label={`${BRAND} AI assistant`}>
           <header className="assistant-head">
             <div className="assistant-avatar"><Icon name="sparkle" size={18} /></div>
             <div>
-              <strong>Developer Assistant</strong>
-              <span>Answers from the docs and community</span>
+              <strong>AI assistant</strong>
+              <span>{BRAND} AI assistant</span>
             </div>
             {messages.length > 0 && (
               <button className="assistant-icon-btn" onClick={() => setMessages([])} disabled={busy} title="New chat" aria-label="New chat">↺</button>
@@ -136,7 +136,7 @@ export default function Assistant() {
           <div className="assistant-body" ref={listRef} aria-live="polite">
             {messages.length === 0 ? (
               <div className="assistant-empty">
-                <p>Hi! Ask me anything about the {BRAND} APIs. I'll answer from the docs and point you to community threads where other developers have solved the same problem.</p>
+                <p>Hi! Welcome to {BRAND} AI. Ask me anything about our APIs, integrations, testing, or errors. I’ll find answers in the docs and point you to community threads where other developers have solved similar problems.</p>
                 <div className="assistant-suggest">
                   {suggestions.map((s) => <button key={s} onClick={() => send(s)}>{s}</button>)}
                 </div>

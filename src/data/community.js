@@ -1,9 +1,12 @@
 // Sample community threads for the prototype. The assistant uses these to
 // point developers at existing discussions. Replace with data from the real forum.
+import { randomGhanaianName } from './ghUsers.js';
+
 export const threads = [
   {
     id: 'momo-timeout-retry',
     title: 'Handling timeouts on mobile money: retry or check status?',
+    author: randomGhanaianName(),
     tag: 'Payments',
     replies: 12,
     solved: true,
@@ -12,6 +15,7 @@ export const threads = [
   {
     id: 'laravel-webhooks',
     title: 'Sharing a Laravel package for webhooks',
+    author: randomGhanaianName(),
     tag: 'Show & tell',
     replies: 8,
     solved: false,
@@ -20,6 +24,7 @@ export const threads = [
   {
     id: 'woocommerce-pending',
     title: 'WooCommerce plugin: orders stuck on pending',
+    author: randomGhanaianName(),
     tag: 'Plugins',
     replies: 5,
     solved: true,
@@ -28,6 +33,7 @@ export const threads = [
   {
     id: 'mcp-cursor-tips',
     title: 'Using the MCP server with Cursor: tips',
+    author: randomGhanaianName(),
     tag: 'AI tools',
     replies: 17,
     solved: false,
@@ -36,6 +42,7 @@ export const threads = [
   {
     id: 'ip-whitelist-cloud',
     title: 'IP whitelisting when my server IP changes (cloud hosting)',
+    author: randomGhanaianName(),
     tag: 'IP whitelisting',
     replies: 9,
     solved: true,
@@ -44,6 +51,7 @@ export const threads = [
   {
     id: 'sender-id-approval',
     title: 'How long does SMS sender ID approval take?',
+    author: randomGhanaianName(),
     tag: 'Messaging',
     replies: 6,
     solved: true,

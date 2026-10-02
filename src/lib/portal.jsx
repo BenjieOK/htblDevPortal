@@ -3,6 +3,7 @@
 // the demo; replace with the real auth and API.
 import { createContext, useContext, useEffect, useState } from 'react';
 import { navigate } from './router.jsx';
+import { randomGhanaianName } from '../data/ghUsers.js';
 
 const STORAGE_KEY = 'portal-demo-state-v2';
 const PortalContext = createContext(null);
@@ -17,7 +18,9 @@ const demoBusinesses = [
 
 function load() {
   try {
-    return { ...EMPTY, ...JSON.parse(localStorage.getItem(STORAGE_KEY)) };
+    const state = { ...EMPTY, ...JSON.parse(localStorage.getItem(STORAGE_KEY)) };
+    if (state.user?.name === 'Developer') state.user = { ...state.user, name: randomGhanaianName() };
+    return state;
   } catch {
     return EMPTY;
   }
@@ -52,7 +55,7 @@ export function PortalProvider({ children }) {
     // Sends the user to the login page, then back to `next` after logging in.
     requireLogin: (next = window.location.pathname) => navigate(`/login?next=${encodeURIComponent(next)}`),
     login: (phone) =>
-      update({ user: { phone, name: 'Developer' }, businesses: demoBusinesses, businessId: demoBusinesses[0].id }),
+      update({ user: { phone, name: randomGhanaianName() }, businesses: demoBusinesses, businessId: demoBusinesses[0].id }),
     logout: () => {
       setState(EMPTY);
       navigate('/');
